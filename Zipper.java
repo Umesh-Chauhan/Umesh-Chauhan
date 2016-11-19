@@ -7,21 +7,21 @@ public class Zipper
 
   private static void extractFile(ZipInputStream in, String outdir, String name) throws IOException
   {
-    // byte[] buffer = new byte[BUFFER_SIZE];
-    // BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(new File(outdir,name)));
-    // int count = -1;
-    // while ((count = in.read(buffer)) != -1)
-      // out.write(buffer, 0, count);
-    // out.close();
+     byte[] buffer = new byte[BUFFER_SIZE];
+     BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(new File(outdir,name)));
+     int count = -1;
+     while ((count = in.read(buffer)) != -1)
+       out.write(buffer, 0, count);
+     out.close();
 	
-	File path = new File(destination,currFile);  
+	/* File path = new File(destination,currFile);  
 	System.out.println(path.getPath());
 	FileOutputStream fos = new FileOutputStream(path);					
 	byte b[] = new byte[4096];
 	while(zis.read(b)>0)
 	{
 		fos.write(b);
-	}
+	} */
   }
 
   private static void mkdirs(File outdir,String path)
